@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.R.K Initiative - Singapore Wildlife Conservation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo-icon">🌿</div>
+                <h1>A.R.K</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="#about">About</a>
+                <a href="#events">Events</a>
+                <a href="#mission">Our Mission</a>
+                <button class="btn btn-primary">Get Involved</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663650634526/SRxr8z2HC8ruDQQn9Z8L6D/ark-hero-wildlife-35Ef9XS9mjoidVrK5eNwwN.webp" alt="Wildlife in Singapore" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2>Advocacy for Wildlife</h2>
+            <p>Join A.R.K Initiative in protecting Singapore's ecosystems and wildlife. Together, we're building a kinder, greener future through conservation, education, and community action.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">Explore Events</button>
+                <button class="btn btn-outline">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="mission-section">
+        <div class="container">
+            <div class="mission-cards">
+                <div class="card">
+                    <div class="card-icon">❤️</div>
+                    <h3>Advocacy</h3>
+                    <p>We advocate for wildlife rights and protection, raising awareness about Singapore's incredible biodiversity and the threats it faces.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Restoration</h3>
+                    <p>Through hands-on conservation work, we restore and protect vital ecosystems like mangrove forests and wetlands that support wildlife.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h3>Kinship</h3>
+                    <p>We build kinship between humans and nature, fostering a community that values coexistence and sustainable living practices.</p>
+                </div>
+            </div>
+
+            <div class="mission-box">
+                <h3>Our Mission</h3>
+                <p>A.R.K Initiative is the platform that bridges multidisciplinary fields with wildlife and the ecosystem, inspired by the biblical Noah's Ark. We're a youth-led groundup dedicated to wildlife conservation, animal welfare, and ecosystem restoration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <p>Join us for nature walks, webinars, and volunteer opportunities. Every event is a chance to make a difference.</p>
+            </div>
+
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663650634526/SRxr8z2HC8ruDQQn9Z8L6D/ark-hero-wildlife-35Ef9XS9mjoidVrK5eNwwN.webp" alt="Sungei Buloh Nature Walk">
+                        <span class="spots-badge">8 spots left</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Sungei Buloh Nature Walk</h3>
+                        <div class="event-meta">
+                            <span><i class="far fa-calendar"></i> May 25, 2026</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Sungei Buloh Wetland Reserve</span>
+                        </div>
+                        <p>Explore Singapore's most important wetland ecosystem. Learn about migratory birds, mangrove forests, and coastal wildlife.</p>
+                        <div class="spots-info">8 of 30 spots available</div>
+                        <button class="btn btn-primary btn-full">Sign Up Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663650634526/SRxr8z2HC8ruDQQn9Z8L6D/ark-hero-community-kxoHHkexeg7iwLJFo7aD4P.webp" alt="Our Shared Spaces Webinar">
+                        <span class="spots-badge">45 spots left</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Our Shared Spaces Webinar</h3>
+                        <div class="event-meta">
+                            <span><i class="far fa-calendar"></i> June 1, 2026</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Online</span>
+                        </div>
+                        <p>Join speakers from ACRES, Woodlands Botanical Garden, and PetCare Medic Singapore to discuss harmonious coexistence with wildlife.</p>
+                        <div class="spots-info">45 of 100 spots available</div>
+                        <button class="btn btn-primary btn-full">Sign Up Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663650634526/SRxr8z2HC8ruDQQn9Z8L6D/ark-hero-ecosystem-XoBLAUe2JsjHDHDfyfD6FY.webp" alt="Mangrove Restoration Volunteer Day">
+                        <span class="spots-badge">12 spots left</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Mangrove Restoration Volunteer Day</h3>
+                        <div class="event-meta">
+                            <span><i class="far fa-calendar"></i> June 15, 2026</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Sungei Buloh Wetland Reserve</span>
+                        </div>
+                        <p>Help restore and protect Singapore's vital mangrove ecosystems. No experience necessary - just bring your passion for nature!</p>
+                        <div class="spots-info">12 of 25 spots available</div>
+                        <button class="btn btn-primary btn-full">Sign Up Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newsletter-section">
+                <p>Want to stay updated on new events?</p>
+                <button class="btn btn-outline">Subscribe to Our Newsletter</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>About A.R.K Initiative</h2>
+                    <p>A.R.K Initiative is a youth-led groundup dedicated to wildlife conservation and the protection of animal rights. Inspired by the biblical Noah's Ark, we embody three core objectives: Wildlife Conservation, Animal Welfare, and Restoration of ecosystems.</p>
+                    <p>We believe that protecting Singapore's incredible biodiversity requires collaboration across disciplines and communities. Through education, advocacy, and hands-on conservation work, we're building a movement of nature lovers and environmental stewards.</p>
+                    <div class="about-buttons">
+                        <button class="btn btn-primary">Get Involved</button>
+                        <button class="btn btn-outline">Follow Us</button>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663650634526/SRxr8z2HC8ruDQQn9Z8L6D/ark-hero-community-kxoHHkexeg7iwLJFo7aD4P.webp" alt="A.R.K Initiative Community">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join our community of nature lovers and conservation advocates. Whether you're interested in volunteering, attending events, or simply learning more, there's a place for you in A.R.K Initiative.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-white">Sign Up for Events</button>
+                <button class="btn btn-outline-white">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>A.R.K Initiative</h4>
+                    <p>Wildlife conservation and ecosystem restoration for a kinder Singapore.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#mission">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/arkinitiative.sg/" target="_blank">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Singapore<br>Email: hello@arkinitiative.sg</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 A.R.K Initiative. All rights reserved. | Advocacy for Wildlife • Restoration of Ecosystems • Kinship with Nature</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
