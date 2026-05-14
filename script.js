@@ -4,56 +4,69 @@ const navMenu = document.querySelector('.nav-menu');
 
 if (hamburger) {
     hamburger.addEventListener('click', function() {
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        navMenu.classList.toggle('active');
     });
 }
 
-// Close mobile menu when a link is clicked
+// Close mobile menu when a link is clicked (only on mobile)
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
     link.addEventListener('click', function() {
-        if (navMenu) {
-            navMenu.style.display = 'none';
+        // Only close on mobile screens
+        if (window.innerWidth <= 768 && navMenu) {
+            navMenu.classList.remove('active');
         }
     });
+});
+
+// Close menu when clicking outside (mobile only)
+document.addEventListener('click', function(event) {
+    if (window.innerWidth <= 768) {
+        const isClickInsideNav = navMenu && navMenu.contains(event.target);
+        const isClickOnHamburger = hamburger && hamburger.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickOnHamburger && navMenu) {
+            navMenu.classList.remove('active');
+        }
+    }
 });
 
 // Event signup button functionality
 const signupButtons = document.querySelectorAll('.btn-primary');
 signupButtons.forEach(button => {
-    if (button.textContent.includes('Sign Up')) {
-        button.addEventListener('click', function() {
-            alert('Thank you for your interest! Event signup form will be available soon. Please follow us on Instagram @arkinitiative.sg for updates.');
-        });
-    }
+    // if (button.textContent.includes('Sign Up')) {
+    //     button.addEventListener('click', function() {
+    //         alert('Thank you for your interest! Event signup form will be available soon. Please follow us on Instagram @arkinitiative.sg for updates.');
+    //     });
+    // }
 });
 
 // Newsletter subscription
 const newsletterBtn = document.querySelector('.newsletter-section .btn-outline');
 if (newsletterBtn) {
-    newsletterBtn.addEventListener('click', function() {
-        alert('Thank you for your interest in subscribing! Please follow us on Instagram @arkinitiative.sg for the latest updates.');
-    });
+    // newsletterBtn.addEventListener('click', function() {
+    //     alert('Thank you for your interest in subscribing! Please follow us on Instagram @arkinitiative.sg for the latest updates.');
+    // });
 }
 
 // Get Involved button
 const getInvolvedButtons = document.querySelectorAll('.btn-primary, .btn-white');
 getInvolvedButtons.forEach(button => {
-    if (button.textContent.includes('Get Involved')) {
-        button.addEventListener('click', function() {
-            alert('We\'d love to have you join us! Please reach out to us at hello@arkinitiative.sg or follow us on Instagram @arkinitiative.sg');
-        });
-    }
+    // if (button.textContent.includes('Get Involved')) {
+    //     button.addEventListener('click', function() {
+    //         alert('We\'d love to have you join us! Please reach out to us at hello@arkinitiative.sg or follow us on Instagram @arkinitiative.sg');
+    //     });
+    // }
 });
 
 // Contact Us button
 const contactButtons = document.querySelectorAll('.btn-outline-white, .btn-outline');
 contactButtons.forEach(button => {
-    if (button.textContent.includes('Contact')) {
-        button.addEventListener('click', function() {
-            alert('Contact us at hello@arkinitiative.sg or follow us on Instagram @arkinitiative.sg');
-        });
-    }
+    // if (button.textContent.includes('Contact')) {
+    //     button.addEventListener('click', function() {
+    //         alert('Contact us at hello@arkinitiative.sg or follow us on Instagram @arkinitiative.sg');
+    //     });
+    // }
 });
 
 // Follow Us button
@@ -72,9 +85,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const headerHeight = 60; // Adjust this number to match your header height
+            const targetPosition = target.offsetTop - headerHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         }
     });
@@ -102,3 +117,14 @@ document.querySelectorAll('.card, .event-card').forEach(el => {
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+function scrollToWithOffset(elementId, offset) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        const targetPosition = element.offsetTop - offset;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}

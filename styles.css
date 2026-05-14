@@ -131,6 +131,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
 }
 
+.logo-image {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
 .nav-menu {
     display: flex;
     align-items: center;
@@ -148,6 +154,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary);
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -160,6 +173,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--primary);
     margin: 5px 0;
     transition: 0.3s;
+}
+
+.nav-menu.active {
+    display: flex !important;
 }
 
 /* Hero Section */
@@ -528,7 +545,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--bg-white);
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow);
         display: none;
+        z-index: 99;
+    }
+
+    .nav-menu.active {
+        display: flex !important;
     }
 
     .hero-content h2 {
